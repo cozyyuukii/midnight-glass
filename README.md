@@ -48,7 +48,7 @@ Since this uses a unified `style.css` and `script.js`, it is ready to be hosted 
 Clone the repository:
 
 ```bash
-git clone [https://github.com/cozyyuukii/midnight-glass.git](https://github.com/cozyyuukii/midnight-glass.git)
+git clone https://github.com/cozyyuukii/midnight-glass.git
 
 ```
 
