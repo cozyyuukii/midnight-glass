@@ -1,0 +1,128 @@
+/* =========================================
+   1. Base Settings
+   ========================================= */
+body {
+    background-color: #050505;
+    color: #e4e4e7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Default Selection Color (Indigo) */
+::selection {
+    background-color: rgba(99, 102, 241, 0.2);
+    color: #a5b4fc;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #27272a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+/* Icon sizing helper */
+i, .social-icon { font-size: 1.25rem; }
+
+/* =========================================
+   2. Spotlight Card Effect
+   ========================================= */
+.spotlight-card {
+    background-color: rgba(24, 24, 27, 0.4);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.spotlight-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.3),
+        transparent 40%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.spotlight-card:hover::before { opacity: 1; }
+
+.spotlight-card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(
+        600px circle at var(--mouse-x) var(--mouse-y),
+        rgba(99, 102, 241, 0.06),
+        transparent 40%
+    );
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 0;
+}
+
+.spotlight-card:hover::after { opacity: 1; }
+
+.card-content { position: relative; z-index: 1; }
+
+/* =========================================
+   3. Modal & Glass Panel (Series/Stellaris)
+   ========================================= */
+#modal-wrapper { transition: opacity 0.3s ease, visibility 0.3s ease; }
+#modal-wrapper.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+#modal-wrapper:not(.hidden) { opacity: 1; visibility: visible; pointer-events: auto; }
+
+.glass-panel {
+    background: rgba(30, 30, 35, 0.4);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================
+   4. Animations
+   ========================================= */
+/* Stagger Helpers */
+.stagger-1 { animation-delay: 100ms; }
+.stagger-2 { animation-delay: 200ms; }
+.stagger-3 { animation-delay: 300ms; }
+.stagger-4 { animation-delay: 400ms; }
+.stagger-5 { animation-delay: 500ms; }
+
+/* Music Equalizer (Stellaris) */
+.eq-bar {
+    width: 4px;
+    border-radius: 9999px;
+    animation: eq-bounce 1s ease-in-out infinite;
+}
+
+@keyframes eq-bounce {
+    0%, 100% { height: 8px; }
+    50% { height: 20px; }
+}
+
+/* TV Static (Series) */
+.tv-static {
+    background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.05;
+    animation: static-noise 0.2s steps(4) infinite;
+}
+
+@keyframes static-noise {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-1%,-1%) }
+    20% { transform: translate(1%,1%) }
+    30% { transform: translate(-2%,-2%) }
+    100% { transform: translate(1%,-1%) }
+}

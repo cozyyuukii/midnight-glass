@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underrated Series | yuukii.</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23818cf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+                    colors: { zinc: { 850: '#1f1f22', 950: '#09090b' } },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'slide-up': 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Specific page override for selection color */
+        ::selection { background-color: rgba(244, 63, 94, 0.2); color: #fda4af; }
+    </style>
+</head>
+<body class="min-h-screen relative">
+
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.15] mix-blend-overlay"></div>
+        <div class="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-rose-900/10 blur-[120px]"></div>
+        <div class="absolute top-[40%] -left-[10%] w-[40%] h-[40%] rounded-full bg-violet-900/10 blur-[100px]"></div>
+    </div>
+
+    <div class="max-w-[1200px] mx-auto p-6 md:p-12 relative z-10">
+        <header class="flex justify-between items-center mb-12 opacity-0 animate-fade-in">
+            <a href="blog.html" class="group flex items-center gap-2 text-zinc-400 hover:text-white transition-colors">
+                <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/5 group-hover:border-rose-500/30 transition-colors"><i class="fa-solid fa-arrow-left text-xs"></i></div>
+                <span class="text-sm font-medium">Back to Blog</span>
+            </a>
+            <div class="text-right">
+                <h1 class="text-2xl font-bold text-white tracking-tight">The Watchlist</h1>
+                <p class="text-xs text-zinc-500 font-mono mt-1">UNDERRATED GEMS</p>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8" id="intro-cards">
+            <article class="col-span-1 lg:col-span-12 spotlight-card rounded-3xl p-8 opacity-0 animate-fade-in stagger-1">
+                <div class="card-content">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-300 text-xs font-medium">TV & Film</span>
+                        <span class="text-zinc-500 text-xs font-mono">Recently Watched</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight tracking-tight">I Watch Too Much TV: A Defense of the Weird & Wonderful</h2>
+                    <div class="prose prose-invert prose-zinc max-w-none">
+                        <p class="text-zinc-400 leading-relaxed mb-4 font-normal">Algorithms are boring. They keep recommending the same five shows. Recently, I've been diving into the stuff that's stranger, darker, and interesting.</p>
+                        <p class="text-zinc-400 leading-relaxed font-normal">From 18th-century highwaymen to Japanese authors with superpowers, this is my collection of "underrated" gems.</p>
+                    </div>
+                    <div class="mt-8 border-t border-white/5 pt-6 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
+                        <div class="flex items-center gap-4">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full bg-zinc-900 border border-white/10"><i class="fa-solid fa-play text-rose-500 text-sm ml-0.5"></i></div>
+                            <div class="text-xs flex flex-col justify-center"><span class="text-white font-medium">Current Obsession</span><span class="text-zinc-500">Waiting for Severance S2</span></div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="px-4 py-2 rounded-xl bg-zinc-900/80 border border-white/5 text-zinc-300 text-xs hover:border-zinc-700 cursor-default">Absurdist Comedy</div>
+                            <div class="px-4 py-2 rounded-xl bg-zinc-900/80 border border-white/5 text-zinc-300 text-xs hover:border-zinc-700 cursor-default">Psychological</div>
+                            <div class="px-4 py-2 rounded-xl bg-zinc-900/80 border border-white/5 text-zinc-300 text-xs hover:border-zinc-700 cursor-default">Anime</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pb-20" id="grid-container"></div>
+
+        <footer class="text-center opacity-0 animate-fade-in border-t border-white/5 pt-8 stagger-3">
+            <p class="text-zinc-600 text-sm font-normal">&copy; <span id="year"></span> cozyyuukii. No spoilers, I promise.</p>
+        </footer>
+    </div>
+
+    <div id="modal-wrapper" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-[2px]" id="modal-backdrop"></div>
+        <div class="relative w-full max-w-2xl glass-panel rounded-3xl p-8 shadow-2xl transform transition-all scale-100 overflow-y-auto max-h-[90vh]">
+            <button id="close-modal" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-zinc-200 hover:text-white hover:bg-white/20 transition-colors backdrop-blur-md"><i class="fa-solid fa-xmark"></i></button>
+            <div class="mb-8">
+                <span id="modal-genre" class="block text-rose-400 text-sm font-bold tracking-widest uppercase mb-2 drop-shadow-lg">Genre</span>
+                <h2 id="modal-title" class="text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight drop-shadow-lg">Show Title</h2>
+            </div>
+            <div class="space-y-8">
+                <div><p id="modal-desc" class="text-zinc-100 text-lg leading-relaxed font-normal drop-shadow-md">Description...</p></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/10 pt-6">
+                    <div><h4 class="text-white text-sm font-bold flex items-center gap-2 mb-3 drop-shadow-md"><i class="fa-solid fa-star text-yellow-400"></i> The Vibe</h4><p id="modal-vibe" class="text-sm text-zinc-200 leading-relaxed font-normal">Vibe...</p></div>
+                    <div><h4 class="text-white text-sm font-bold flex items-center gap-2 mb-3 drop-shadow-md"><i class="fa-solid fa-quote-left text-zinc-300"></i> Fun Fact</h4><p id="modal-fact" class="text-sm text-zinc-200 leading-relaxed font-normal">Fact...</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Page Specific Logic (Data & Rendering)
+        const shows = [
+            { title: "Slow Horses", genre: "Spy Thriller / Dark Comedy", icon: "fa-user-secret", color: "stone", desc: "Imagine James Bond, but he hasn't showered in a week. Gary Oldman is delightfully disgusting as Jackson Lamb.", vibe: "Gritty, cynical, and unintentionally hilarious.", fact: "Gary Oldman says playing Jackson Lamb is the most fun he's ever had." },
+            { title: "Bungo Stray Dogs", genre: "Supernatural / Mystery", icon: "fa-book-skull", color: "purple", desc: "Famous literary authors reimagined as superpowered detectives and mafia members. It's like literature class, but everyone is fighting to the death.", vibe: "High fashion, jazz music, and extreme violence.", fact: "Characters' abilities are named after real-life authors' famous books." },
+            { title: "Code Geass", genre: "Mecha / Political Drama", icon: "fa-chess-knight", color: "violet", desc: "A masterclass in dramatic hand gestures and ethical dilemmas. Lelouch uses the power of Geass to start a revolution.", vibe: "Over-the-top melodrama and 4D chess strategies.", fact: "Characters were designed by CLAMP, explaining the limbs." },
+            { title: "Mythic Quest", genre: "Workplace Comedy", icon: "fa-gamepad", color: "emerald", desc: "A comedy about a video game studio that feels painfully real. Ian and Poppy have the most toxic yet productive platonic marriage.", vibe: "Like 'Silicon Valley' but with more swords.", fact: "Co-created by Rob McElhenney and produced by Ubisoft." },
+            { title: "Dick Turpin", genre: "Absurdist Comedy", icon: "fa-mask", color: "pink", desc: "Noel Fielding plays a legendary highwayman who is actually a vegan pacifist that knits.", vibe: "Whimsical, colorful, and completely unhinged.", fact: "Costumes are wildly anachronistic on purpose." },
+            { title: "Severance", genre: "Sci-Fi / Psychological", icon: "fa-id-badge", color: "cyan", desc: "What if you could surgically separate your work memories from your life memories? The most terrifying show about office culture.", vibe: "Sterile, creepy, and clean. Avoid the Waffle Party.", fact: "Computers used are real custom-built terminals." },
+            { title: "Dr. Stone", genre: "Sci-Fi / Adventure", icon: "fa-flask", color: "lime", desc: "Humanity turns to stone. One genius kid wakes up and rebuilds civilization using science.", vibe: "Optimistic and educational.", fact: "Has a dedicated science consultant." },
+            { title: "Love at First Sight", genre: "Romance", icon: "fa-plane-departure", color: "rose", desc: "A rom-com about two people meeting at an airport. It sounds cliché, but the statistical narration makes it charming.", vibe: "Warm, fuzzy, and weirdly comforting.", fact: "Based on 'The Statistical Probability of Love at First Sight'." }
+        ];
+
+        const grid = document.getElementById('grid-container');
+        const mTitle = document.getElementById('modal-title');
+        const mGenre = document.getElementById('modal-genre');
+        const mDesc = document.getElementById('modal-desc');
+        const mVibe = document.getElementById('modal-vibe');
+        const mFact = document.getElementById('modal-fact');
+
+        shows.forEach((show, index) => {
+            const card = document.createElement('div');
+            card.className = `spotlight-card rounded-2xl p-6 group cursor-pointer opacity-0 animate-slide-up`;
+            card.style.animationDelay = `${(index + 3) * 50}ms`;
+            card.innerHTML = `
+                <div class="card-content h-full flex flex-col justify-between">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-zinc-900 flex items-center justify-center text-zinc-500 group-hover:text-${show.color}-400 group-hover:bg-${show.color}-500/10 transition-all duration-300 shadow-lg border border-white/5"><i class="fa-solid ${show.icon} text-xl"></i></div>
+                        <span class="text-[10px] uppercase tracking-widest text-zinc-600 font-bold group-hover:text-${show.color}-400 transition-colors duration-300">#${index + 1}</span>
+                    </div>
+                    <div><h4 class="text-lg font-bold text-white mb-1 group-hover:text-${show.color}-300 transition-colors">${show.title}</h4><p class="text-xs text-zinc-500 font-medium mb-3">${show.genre}</p><p class="text-sm text-zinc-400 line-clamp-3 leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">${show.desc}</p></div>
+                    <div class="mt-4 flex justify-end"><div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 duration-300"><i class="fa-solid fa-plus text-xs text-zinc-400"></i></div></div>
+                </div>
+            `;
+            card.addEventListener('click', () => {
+                mTitle.textContent = show.title;
+                mGenre.textContent = show.genre;
+                mDesc.textContent = show.desc;
+                mVibe.textContent = show.vibe;
+                mFact.textContent = show.fact;
+                mGenre.className = `block text-${show.color}-400 text-sm font-bold tracking-widest uppercase mb-2 drop-shadow-lg`;
+                openGenericModal(); // Defined in script.js
+            });
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>

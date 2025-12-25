@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellaris | yuukii.</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23818cf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+                    colors: { zinc: { 850: '#1f1f22', 950: '#09090b' } },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'slide-up': 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen relative selection:bg-indigo-500/30">
+
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.15] mix-blend-overlay"></div>
+        <div class="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-indigo-900/10 blur-[120px]"></div>
+        <div class="absolute top-[40%] -left-[10%] w-[40%] h-[40%] rounded-full bg-rose-900/10 blur-[100px]"></div>
+    </div>
+
+    <div class="max-w-[1200px] mx-auto p-6 md:p-12 relative z-10">
+        <header class="flex justify-between items-center mb-12 opacity-0 animate-fade-in">
+            <a href="blog.html" class="group flex items-center gap-2 text-zinc-400 hover:text-white transition-colors">
+                <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/5 group-hover:border-indigo-500/30 transition-colors"><i class="fa-solid fa-arrow-left text-xs"></i></div>
+                <span class="text-sm font-medium">Back to Blog</span>
+            </a>
+            <div class="text-right">
+                <h1 class="text-2xl font-bold text-white tracking-tight">Stellaris</h1>
+                <p class="text-xs text-zinc-500 font-mono mt-1">THE COLLECTION</p>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8" id="intro-cards">
+            <article class="col-span-1 lg:col-span-12 spotlight-card rounded-3xl p-8 opacity-0 animate-fade-in stagger-1">
+                <div class="card-content">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium">Progressive Rock/Metal</span>
+                        <span class="text-zinc-500 text-xs font-mono">November 2025</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight tracking-tight">Complexity, Atmosphere, and the Art of the Long Song</h2>
+                    <div class="prose prose-invert prose-zinc max-w-none">
+                        <p class="text-zinc-400 leading-relaxed mb-4 font-normal">Lately, I've been lost in the intricate rhythms of progressive metal. From <strong class="text-zinc-200 font-medium">Tool</strong> to <strong class="text-zinc-200 font-medium">Porcupine Tree</strong>, my current playlist demands attention.</p>
+                        <p class="text-zinc-400 leading-relaxed font-normal">There's something profound about a 17-minute epic like <em>Anesthetize</em>. These aren't just songs; they are architectural marvels.</p>
+                    </div>
+                    <div class="mt-8 border-t border-white/5 pt-6 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
+                        <div class="flex items-center gap-4">
+                            <div class="flex items-end gap-1 h-6 pb-1">
+                                <div class="eq-bar bg-indigo-500" style="animation-delay: 0ms;"></div>
+                                <div class="eq-bar bg-purple-500" style="animation-delay: 150ms;"></div>
+                                <div class="eq-bar bg-emerald-500" style="animation-delay: 300ms;"></div>
+                                <div class="eq-bar bg-rose-500" style="animation-delay: 75ms;"></div>
+                            </div>
+                            <div class="text-xs flex flex-col justify-center"><span class="text-white font-medium">Heavy Rotation</span><span class="text-zinc-500">Tool, Haken, Soen</span></div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="px-4 py-2 rounded-xl bg-zinc-900/80 border border-white/5 text-zinc-300 text-xs hover:border-zinc-700 cursor-default">Odd Time Signatures</div>
+                            <div class="px-4 py-2 rounded-xl bg-zinc-900/80 border border-white/5 text-zinc-300 text-xs hover:border-zinc-700 cursor-default">Melancholic</div>
+                            <div class="px-4 py-2 rounded-xl bg-zinc-900/80 border border-white/5 text-zinc-300 text-xs hover:border-zinc-700 cursor-default">Djent</div>
+                            <div class="px-4 py-2 rounded-xl bg-zinc-900/80 border border-white/5 text-zinc-300 text-xs hover:border-zinc-700 cursor-default">Atmospheric</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="mb-12 opacity-0 animate-fade-in stagger-2">
+            <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-indigo-900/20 bg-[#1c1c1e]"> 
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/in/playlist/stellaris/pl.u-11zBBE3CKNP93R3?theme=dark"></iframe>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-20" id="grid-container"></div>
+
+        <footer class="text-center opacity-0 animate-fade-in border-t border-white/5 pt-8 stagger-3">
+            <p class="text-zinc-600 text-sm font-normal">&copy; <span id="year"></span> cozyyuukii. Curated with <i class="fa-solid fa-heart text-indigo-500/50 mx-1"></i> for the audiophiles.</p>
+        </footer>
+    </div>
+
+    <div id="modal-wrapper" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-[2px]" id="modal-backdrop"></div>
+        <div class="relative w-full max-w-2xl glass-panel rounded-3xl p-8 shadow-2xl transform transition-all scale-100 overflow-y-auto max-h-[90vh]">
+            <button id="close-modal" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-zinc-200 hover:text-white hover:bg-white/20 transition-colors backdrop-blur-md"><i class="fa-solid fa-xmark"></i></button>
+            <div class="mb-8">
+                <span id="modal-artist" class="block text-indigo-400 text-sm font-bold tracking-widest uppercase mb-2 drop-shadow-lg">Artist Name</span>
+                <h2 id="modal-title" class="text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight drop-shadow-lg">Song Title</h2>
+            </div>
+            <div class="space-y-8">
+                <div><p id="modal-desc" class="text-zinc-100 text-lg leading-relaxed font-normal drop-shadow-md">Description...</p></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/10 pt-6">
+                    <div><h4 class="text-white text-sm font-bold flex items-center gap-2 mb-3 drop-shadow-md"><i class="fa-solid fa-users text-zinc-300"></i> Personnel</h4><ul id="modal-credits" class="space-y-2 text-sm text-zinc-200 font-normal"></ul></div>
+                    <div><h4 class="text-white text-sm font-bold flex items-center gap-2 mb-3 drop-shadow-md"><i class="fa-solid fa-lightbulb text-yellow-400"></i> Did You Know?</h4><p id="modal-fact" class="text-sm text-zinc-200 leading-relaxed font-normal">Fact...</p></div>
+                </div>
+                <div class="pt-4"><a id="modal-link" href="#" target="_blank" class="flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-[#fa243c]/20 text-white border border-[#fa243c]/30 hover:bg-[#fa243c] hover:border-[#fa243c] transition-all font-medium group backdrop-blur-sm shadow-lg"><i class="fa-brands fa-apple text-xl group-hover:scale-110 transition-transform"></i><span>Listen on Apple Music</span></a></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Data & Rendering
+        const songs = [
+            { title: "The Sound of Muzak", artist: "Porcupine Tree", icon: "fa-music", color: "indigo", desc: "A rhythmic protest against the commodification of music. Gavin Harrison's drumming in 7/4 time is impeccable.", credits: ["Steven Wilson: Vocals, Guitar", "Gavin Harrison: Drums"], fact: "Written in 7/4 time but flows like a pop song." },
+            { title: "Vicarious", artist: "TOOL", icon: "fa-eye", color: "purple", desc: "A scathing commentary on society's addiction to tragedy.", credits: ["Maynard James Keenan: Vocals", "Adam Jones: Guitar"], fact: "Lyrics critique detachment of modern news consumption." },
+            { title: "Lateralus", artist: "TOOL", icon: "fa-dna", color: "emerald", desc: "A mathematical spiral using the Fibonacci sequence.", credits: ["Maynard James Keenan: Vocals", "Danny Carey: Drums"], fact: "Syllables in verses follow Fibonacci sequence." },
+            { title: "Anesthetize", artist: "Porcupine Tree", icon: "fa-capsules", color: "blue", desc: "A 17-minute odyssey through apathy featuring Alex Lifeson.", credits: ["Steven Wilson: Vocals", "Alex Lifeson: Guitar"], fact: "Alex Lifeson of Rush plays the solo." },
+            { title: "Monarch", artist: "Soen", icon: "fa-crown", color: "red", desc: "Punchy, aggressive, and deeply melodic.", credits: ["Joel Ekelöf: Vocals", "Martin Lopez: Drums"], fact: "Martin Lopez was formerly in Opeth." },
+            { title: "Octavarium", artist: "Dream Theater", icon: "fa-circle-nodes", color: "yellow", desc: "The 24-minute magnum opus paying homage to Pink Floyd and Yes.", credits: ["John Petrucci: Guitar", "Mike Portnoy: Drums"], fact: "Starts in F and ends in F, completing the octave." },
+            { title: "Forty Six & 2", artist: "TOOL", icon: "fa-brain", color: "purple", desc: "A study in evolution driven by an iconic bassline.", credits: ["Justin Chancellor: Bass", "Danny Carey: Drums"], fact: "Refers to a theory about chromosomal evolution." }
+        ];
+
+        const grid = document.getElementById('grid-container');
+        const mTitle = document.getElementById('modal-title');
+        const mArtist = document.getElementById('modal-artist');
+        const mDesc = document.getElementById('modal-desc');
+        const mCredits = document.getElementById('modal-credits');
+        const mFact = document.getElementById('modal-fact');
+        const mLink = document.getElementById('modal-link');
+
+        songs.forEach((song, index) => {
+            const card = document.createElement('div');
+            card.className = `spotlight-card rounded-2xl p-5 group cursor-pointer opacity-0 animate-slide-up`;
+            card.style.animationDelay = `${(index + 3) * 50}ms`;
+            card.innerHTML = `
+                <div class="card-content flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center text-zinc-500 group-hover:text-${song.color}-400 group-hover:bg-${song.color}-500/10 transition-all duration-300 shadow-lg"><i class="fa-solid ${song.icon}"></i></div>
+                    <div class="flex-1 min-w-0"><h4 class="text-sm font-bold text-white truncate group-hover:text-${song.color}-300 transition-colors">${song.title}</h4><p class="text-xs text-zinc-500 truncate font-medium">${song.artist}</p></div>
+                    <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300"><i class="fa-solid fa-expand text-xs text-zinc-400"></i></div>
+                </div>
+            `;
+            card.addEventListener('click', () => {
+                mTitle.textContent = song.title;
+                mArtist.textContent = song.artist;
+                mDesc.textContent = song.desc;
+                mFact.textContent = song.fact;
+                mCredits.innerHTML = song.credits.map(c => `<li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5"></span><span>${c}</span></li>`).join('');
+                mLink.href = `https://music.apple.com/search?term=${encodeURIComponent(`${song.title} ${song.artist}`)}`;
+                openGenericModal(); // Defined in script.js
+            });
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
