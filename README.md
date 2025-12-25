@@ -72,7 +72,9 @@ Note: The spotlight effect automatically attaches to any element with the class 
 ### 📄 Credits
 
 Icons: [Font Awesome 6](https://fontawesome.com/)
+
 Texture: [Grainy Gradients](https://grainy-gradients.vercel.app/)
+
 Font: [Inter](https://rsms.me/inter/) & [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 
 <p align="center"> Crafted with ☕ and Code by <b>yuukii.</b> </p>
