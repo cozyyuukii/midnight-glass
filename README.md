@@ -1,5 +1,3 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b598c890-9f78-4709-abdc-71c17f886206" /># 🌑 Midnight Glass
-
 ![License](https://img.shields.io/badge/license-MIT-6366f1?style=flat-square)
 ![Design](https://img.shields.io/badge/design-glassmorphism-cyan?style=flat-square)
 ![Vibe](https://img.shields.io/badge/vibe-atmospheric-f43f5e?style=flat-square)
